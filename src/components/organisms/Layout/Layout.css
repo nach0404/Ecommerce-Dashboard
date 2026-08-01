@@ -1,0 +1,46 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-area {
+  margin-left: 250px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header {
+  height: 60px;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.main-content {
+  padding: 2rem;
+  flex: 1;
+}
+
+@media (max-width: 1024px) {
+  .main-area {
+    margin-left: 0;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
