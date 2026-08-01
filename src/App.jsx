@@ -5,6 +5,7 @@ import Layout from './components/organisms/Layout/Layout'
 import Home from './pages/Home/Home'
 import ProductsList from './pages/Products/ProductsList/ProductsList'
 import ProductView from './pages/Products/ProductView/ProductView'
+import ProductNew from './pages/Products/ProductNew/ProductNew'
 import CategoriesList from './pages/Categories/CategoriesList/CategoriesList'
 import NotFound from './pages/NotFound/NotFound'
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<ProductsList />} />
           <Route path="/products/:id" element={<ProductView />} />
+          <Route path="/products/new" element={<ProductNew />} />
           <Route path="/categories" element={<CategoriesList />} />
           <Route path="/profile" element={<h1>Perfil</h1>} />
           <Route path="*" element={<NotFound />} />

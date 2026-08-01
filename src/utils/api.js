@@ -14,3 +14,23 @@ export const getCategories = async () => {
     const res = await fetch(`${API_URL}/categories`)
     return res.json()
 }
+
+export const getProductById = async (id) => {
+    const res = await fetch(`${API_URL}/products/${id}`)
+    return res.json()
+}
+
+export const updateProduct = async (id, data) => {
+    const res = await fetch(`${API_URL}/products/${id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    })
+    return res.json()
+}
+
+export const deleteProduct = async (id) => {
+    await fetch(`${API_URL}/products/${id}`, {
+        method: 'DELETE'
+    })
+}
