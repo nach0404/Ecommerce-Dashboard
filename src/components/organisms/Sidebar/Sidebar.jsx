@@ -6,8 +6,15 @@ function Sidebar({ isOpen, onClose }) {
     <>
       {isOpen && <div className="overlay" onClick={onClose}></div>}
       <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
+
+        <div className="sidebar-profile">
+          <NavLink to="/profile" className="profile-btn">
+            👤 Mi Perfil
+          </NavLink>
+        </div>
+
         <nav className="sidebar-nav">
-          <NavLink to="/" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+          <NavLink to="/" end className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
             🏠 Inicio
           </NavLink>
           <NavLink to="/products" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
@@ -17,6 +24,7 @@ function Sidebar({ isOpen, onClose }) {
             🏪 Categorías
           </NavLink>
         </nav>
+
       </aside>
     </>
   )

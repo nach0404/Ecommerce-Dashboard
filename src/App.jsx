@@ -17,6 +17,7 @@ function App() {
           <Route path="/products" element={<ProductsList />} />
           <Route path="/products/:id" element={<ProductView />} />
           <Route path="/categories" element={<CategoriesList />} />
+          <Route path="/profile" element={<h1>Perfil</h1>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
